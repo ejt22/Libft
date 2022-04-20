@@ -6,14 +6,15 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:00:30 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/11 14:04:50 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/19 15:03:48 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
+#include "libft.h"
+/*
 #include <string.h>
 #include <unistd.h>
-
+*/
 void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	i;

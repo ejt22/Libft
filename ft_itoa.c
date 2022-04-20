@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 16:04:56 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/11 10:27:00 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/19 15:07:15 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ static long	ft_absn(int n)
 {
 	long	nbr;
 
+	nbr = 0;
 	if (n >= 0)
 		nbr = n;
 	else if (n < 0)
@@ -62,13 +63,13 @@ char	*ft_itoa(int n)
 	int		len;
 	char	*str;
 
+	len = ft_nlen(n);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	if (n == 0)
 		return (ft_itoazero(0));
 	nbr = ft_absn(n);
-	len = ft_nlen(n);
 	str[len--] = '\0';
 	while (nbr)
 	{
@@ -84,6 +85,6 @@ char	*ft_itoa(int n)
 
 int	main(void)
 {
-	printf("%s\n", ft_itoa(-8765));
+	printf("%s\n", ft_itoa(0501));
 	return (0);
 }
