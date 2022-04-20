@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 16:04:56 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/19 15:07:15 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/20 15:10:43 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,12 +79,4 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		str[0] = '-';
 	return (str);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%s\n", ft_itoa(0501));
-	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 15:51:53 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/07 11:53:38 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/20 15:12:34 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
+/*
 #include <stdlib.h>
 #include <stdio.h>
 int main()
@@ -40,3 +40,4 @@ int main()
 	//printf("%d\n", ft_strncmp("abc","Abc", 5));
 	return (0);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:49:55 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/20 09:52:24 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/20 15:12:11 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dstlen = dstsize;
 	return (dstlen + srclen);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 int main()
@@ -52,3 +52,4 @@ int main()
     printf("dest after strlcat : %zu\n", dest2);
     return (0);
 }
+*/
