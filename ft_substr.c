@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 16:35:30 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/07 15:51:47 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/21 12:35:52 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	i = ((size_t)start);
 	j = 0;
-	while (s[i] && j < len)
+	while (i < ft_strlen(s) && j < len)
 	{
 		ptr[j] = s[i];
 		i++;
@@ -41,9 +41,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 int	main()
 {
-	char s[] = "Hello Charlie!";
-	unsigned int start = 0;
-	size_t	len = 6;
+	char s[] = "lorem ipsum dolor sit amet";
+	unsigned int start = 400;
+	size_t	len = 20;
 
 	printf("%s\n", ft_substr(s, start, len));
 	return (0);
