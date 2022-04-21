@@ -6,12 +6,12 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 10:48:28 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/20 15:11:49 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/21 11:57:31 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <string.h>
+#include "libft.h"
+//#include <string.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -20,13 +20,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	if (!s1 || !s2)
 		return (0);
-	if (n > 0)
+	while (i < n)
 	{
-		while (((unsigned char *)s1)[i] == ((unsigned char *)s2)[i]
-			&& (((unsigned char *)s1)[i] || ((unsigned char *)s2)[i])
-			&& i < n)
-			i++;
-		return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+		i++;
 	}
 	return (0);
 }
@@ -35,11 +33,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 int	main()
 {
-	const char s1[] = "Hella";
-	const char s2[] = "Hello";
+	const char s1[] = "";
+	const char s2[] = "test";
 
-	printf("%d\n", memcmp(s1, s2, 5));
-	printf("%d\n", ft_memcmp(s1, s2, 5));
+	printf("%d\n", memcmp(s1, s2, 4));
+	printf("%d\n", ft_memcmp(s1, s2, 4));
 	return (0);
 }
 */
