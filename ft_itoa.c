@@ -6,13 +6,13 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 16:04:56 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/20 15:10:43 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:04:43 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
+//#include <string.h>
+//#include <stdlib.h>
 
 static int	ft_nlen(int n)
 {
@@ -45,23 +45,23 @@ char	*ft_itoazero(int n)
 	return (NULL);
 }
 
-static long	ft_absn(int n)
+static long long	ft_absn(int n)
 {
-	long	nbr;
+	long long	nbr;
 
 	nbr = 0;
 	if (n >= 0)
 		nbr = n;
 	else if (n < 0)
-		nbr = -n;
+		nbr = (long long)n * (-1);
 	return (nbr);
 }
 
 char	*ft_itoa(int n)
 {
-	long	nbr;
-	int		len;
-	char	*str;
+	long long	nbr;
+	int			len;
+	char		*str;
 
 	len = ft_nlen(n);
 	str = (char *)malloc(sizeof(char) * (len + 1));
@@ -80,3 +80,12 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
+
+/*
+#include <stdio.h>
+int	main(void)
+{
+	printf("%s\n", ft_itoa(-2147483648LL));
+	return (0);
+}
+*/
