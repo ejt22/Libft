@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 16:35:30 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/21 12:35:52 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/21 14:12:17 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*ptr;
 	size_t	i;
 	size_t	j;
+	size_t	n;
 
 	if (!s)
 		return (NULL);
-	ptr = malloc (sizeof(char) * (len + 1));
+	if (len >= ft_strlen(s))
+		n = ft_strlen(s);
+	else
+		n = len;
+	ptr = malloc (sizeof(char) * (n + 1));
 	if (!ptr)
 		return (NULL);
 	i = ((size_t)start);
