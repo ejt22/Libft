@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 16:04:56 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/21 13:04:43 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/21 14:18:18 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,11 @@ char	*ft_itoa(int n)
 	char		*str;
 
 	len = ft_nlen(n);
+	if (n == 0)
+		return (ft_itoazero(0));
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	if (n == 0)
-		return (ft_itoazero(0));
 	nbr = ft_absn(n);
 	str[len--] = '\0';
 	while (nbr)

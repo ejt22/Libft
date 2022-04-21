@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:16:06 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/20 16:21:17 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/21 16:21:56 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t			i;
 
-	if (!dst || !src)
+	if (!dst && !src && len > 0)
 		return (NULL);
 	if (src < dst)
 	{

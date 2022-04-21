@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 11:38:16 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/07 17:03:07 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/21 15:59:42 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (!haystack || !needle)
-		return (NULL);
 	if (needle[0] == 0)
 		return (((char *)haystack));
 	i = 0;

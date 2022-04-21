@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 14:50:14 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/21 11:08:33 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/21 14:35:50 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	ft_bzero(void *s, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (!s)
-		return ;
 	while (i < n)
 	{
 		((unsigned char *)s)[i] = 0;

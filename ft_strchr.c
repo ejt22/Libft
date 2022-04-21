@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 14:42:35 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/21 10:34:55 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/21 16:20:41 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (!s)
-		return (NULL);
 	while (*s && *s != ((char)c))
 		s++;
 	if (*s == ((char)c))

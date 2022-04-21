@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:56:31 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/05 13:13:03 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/21 15:59:00 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	srcsize;
 
-	if (!dst || !src)
-		return (0);
 	i = 0;
 	if (dstsize)
 	{

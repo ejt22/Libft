@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 15:14:47 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/21 12:17:43 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/21 15:57:08 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	i;
 	size_t	len;
 
-	if (!s)
-		return (NULL);
 	len = ft_strlen(s);
 	i = len;
 	while (i > 0 && s[i] != ((char)c))
