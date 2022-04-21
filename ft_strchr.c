@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 14:42:35 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/07 17:03:29 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/21 10:34:55 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ char	*ft_strchr(const char *s, int c)
 
 int	main()
 {
-	char	s[] = "Hellocharlie";
-	int		c = 'e';
+	char	s[] = "";
+	int		c = '8';
 
 	printf("%s\n", ft_strchr(s, c));
 	return (0);

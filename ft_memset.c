@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 10:03:30 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/05 14:40:22 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/21 10:18:41 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memset(void *b, int c, size_t len)
 		((unsigned char *)b)[i] = c;
 		i++;
 	}
-	return (b);
+	return ((void *)b);
 }
 /*
 #include <stdio.h>

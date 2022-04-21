@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:49:55 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/20 15:12:11 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/21 10:04:22 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,22 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	dstlen;
-	size_t	srclen;
-
+	size_t	j;
+	
 	if (!dst || !src)
 		return (0);
-	dstlen = ft_strlen(dst);
-	srclen = ft_strlen(src);
-	if (dstsize && dstlen < dstsize - 1)
-	{
-		i = 0;
-		while (src[i] && i < dstsize - dstlen - 1)
+	if (dstsize <= ft_strlen(dst))
+		return (dstsize + ft_strlen(src));
+	i = 0;
+	j = ft_strlen(dst);
+	while (src[i] && j < dstsize - 1)
 		{
-			dst[i + dstlen] = src[i];
+			dst[j] = src[i];
 			i++;
+			j++;
 		}
-		dst[i] = '\0';
-	}
-	if (dstlen >= dstsize)
-		dstlen = dstsize;
-	return (dstlen + srclen);
+	dst[j] = '\0';
+	return (ft_strlen(dst) + ft_strlen(&src[i]));
 }
 /*
 #include <stdio.h>
@@ -53,3 +49,4 @@ int main()
     return (0);
 }
 */
+

@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 16:05:50 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/08 16:39:46 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/20 14:53:30 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,11 +78,11 @@ char	**ft_split(char const *s, char c)
 	i = -1;
 	j = 0;
 	start = -1;
-	while (++i <= ft_strlen(s))
+	while (++i <= (int)ft_strlen(s))
 	{
 		if (s[i] != c && start < 0)
 			start = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && start >= 0)
+		else if ((s[i] == c || i == (int)ft_strlen(s)) && start >= 0)
 		{
 			str[j++] = ft_strdupwd(s, start, i);
 			start = -1;

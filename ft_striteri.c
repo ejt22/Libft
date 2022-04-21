@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 12:53:36 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/20 13:23:59 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/20 14:54:37 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
+/*
 void ft_f(unsigned int i, char *c)
 {
 	if ((*c >= 'A' && *c <= 'Y') || (*c >= 'a' && *c <= 'y'))
@@ -44,3 +44,4 @@ int	main (void)
 	printf("%s\n", s);
 	return (0);
 }
+*/

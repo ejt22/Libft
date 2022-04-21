@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 10:48:28 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/07 11:54:17 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/20 15:11:49 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
+/*
 #include <stdio.h>
 
 int	main()
@@ -42,3 +42,4 @@ int	main()
 	printf("%d\n", ft_memcmp(s1, s2, 5));
 	return (0);
 }
+*/
