@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 14:00:28 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/25 12:04:52 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/25 12:46:57 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,7 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9' && ++size)
-	{
-		res = res * 10 + (str[i] - '0');
-		i++;
-	}
+		res = res * 10 + (str[i++] - '0');
 	return (protected_atoi(res, sign, size));
 }
 /*

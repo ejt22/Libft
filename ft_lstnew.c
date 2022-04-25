@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elsajoo-thomson <elsajoo-thomson@studen    +#+  +:+       +#+        */
+/*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 10:11:31 by elsajoo-tho       #+#    #+#             */
-/*   Updated: 2022/04/22 11:25:57 by elsajoo-tho      ###   ########.fr       */
+/*   Updated: 2022/04/25 12:57:58 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
 
-	if (!content)
-		return (NULL);
 	new = malloc(sizeof(t_list));
 	if (!new)
 		return (NULL);
