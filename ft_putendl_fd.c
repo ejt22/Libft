@@ -6,15 +6,12 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:00:30 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/20 15:05:53 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:46:29 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-#include <string.h>
-#include <unistd.h>
-*/
+
 void	ft_putendl_fd(char *s, int fd)
 {
 	size_t	i;

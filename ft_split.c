@@ -6,15 +6,12 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 15:40:50 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/26 12:32:39 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:36:58 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-#include <stdio.h>
-#include <stdlib.h>
-*/
+
 static int	ft_wdcount(char const *s, char c)
 {
 	int	count;
@@ -117,22 +114,3 @@ char	**ft_split(char const *s, char c)
 	strs[i] = NULL;
 	return (strs);
 }
-/*
-int main(void)
-{
-	char const s[] = "";
-	char	c = '-';
-
-	printf("%d\n", ft_wdcount(s, c));
-
-	// int	i;
-
-	// i = 0;
-	// while ((ft_split(s, ' '))[i] != 0)
-	// {
-	// 	printf("%s\n", (ft_split(s, ' '))[i]);
-	// 	i++;
-	// }
-	return (0);
-}
-*/

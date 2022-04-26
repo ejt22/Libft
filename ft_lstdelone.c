@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 12:23:30 by elsajoo-tho       #+#    #+#             */
-/*   Updated: 2022/04/26 12:41:01 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:58:12 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!lst)
+	if (!lst || !del)
 		return ;
-	del(lst->content);
+	(*del)(lst->content);
 	free(lst);
 }

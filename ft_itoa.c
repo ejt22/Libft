@@ -6,13 +6,11 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 16:04:56 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/21 14:18:18 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:42:40 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <string.h>
-//#include <stdlib.h>
 
 static int	ft_nlen(int n)
 {
@@ -29,7 +27,7 @@ static int	ft_nlen(int n)
 	return (len);
 }
 
-char	*ft_itoazero(int n)
+static char	*ft_itoazero(int n)
 {
 	char	*str;
 
@@ -80,12 +78,3 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	printf("%s\n", ft_itoa(-2147483648LL));
-	return (0);
-}
-*/

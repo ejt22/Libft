@@ -6,12 +6,11 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 11:38:16 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/21 15:59:42 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/26 13:53:22 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <string.h>
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -36,15 +35,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-
-int	main ()
-{
-	const char h[] = "Hello";
-	const char n[] = "Hello";
-	printf("%s\n", strnstr(h, n, 0));
-	printf("%s\n", ft_strnstr(h, n, 0));
-	return (0);
-}
-*/
