@@ -6,17 +6,17 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 15:54:17 by elsajoo-tho       #+#    #+#             */
-/*   Updated: 2022/04/25 12:40:45 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/26 12:44:27 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*newlst;
 	t_list	*elem;
-	
+
 	newlst = NULL;
 	while (lst && f)
 	{

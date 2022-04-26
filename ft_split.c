@@ -5,126 +5,134 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/07 16:05:50 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/20 14:53:30 by ejoo-tho         ###   ########.fr       */
+/*   Created: 2022/04/25 15:40:50 by ejoo-tho          #+#    #+#             */
+/*   Updated: 2022/04/26 12:32:39 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /*
-#include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
 */
 static int	ft_wdcount(char const *s, char c)
 {
-	static int	count;
-	static int	trigger;
+	int	count;
+	int	i;
 
-	if (!s)
-		return (0);
+	i = 0;
 	count = 0;
-	trigger = -1;
-	while (*s)
+	while (s[i])
 	{
-		if (*s != c && trigger < 0)
-		{
-			trigger = 1;
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i] && s[i] != c)
 			count++;
-		}
-		else if (*s == c)
-			trigger = -1;
-		s++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
 	return (count);
 }
 
-static char	*ft_strdupwd(char const *s, int start, int finish)
+static int	ft_indexwd(char const *s, char c, int index)
 {
-	char	*word;
-	int		i;
+	int	i;
+	int	ret;
 
-	if (!s)
-		return (0);
-	word = malloc(sizeof(char) * (finish - start + 1));
-	if (!word)
-		return (NULL);
 	i = 0;
-	while (start < finish)
-		word[i++] = s[start++];
-	word[i] = '\0';
-	return (word);
+	ret = 0;
+	while (s[i])
+	{
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i] && s[i] != c && index >= 0)
+		{
+			ret = i;
+			index--;
+		}
+		while (s[i] && s[i] != c)
+			i++;
+	}
+	if (index < 0)
+		return (ret);
+	return (-1);
+}
+
+static char	*ft_strdupwd(char const *s, char c, int start)
+{
+	int		i;
+	int		j;
+	int		len;
+	char	*word;
+
+	i = start;
+	len = 0;
+	j = 0;
+	while (s[i])
+	{
+		while (s[i] && s[i++] != c)
+			len++;
+		word = malloc(sizeof(char) * (len + 1));
+		if (!word)
+			return (NULL);
+		while (j < len)
+			word[j++] = s[start++];
+		word[j] = '\0';
+		return (word);
+	}
+	return (NULL);
+}
+
+static char	**ft_freesplit(char **strs)
+{
+	int	i;
+
+	i = 0;
+	while (strs[i] != NULL)
+		free(strs[i++]);
+	free(strs);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**str;
 	int		i;
-	int		j;
-	int		start;
+	int		n;
+	char	**strs;
 
-	str = malloc(sizeof(char *) * (ft_wdcount(s, c) + 1));
-	if (!s || !str)
+	if (!s)
 		return (NULL);
-	i = -1;
-	j = 0;
-	start = -1;
-	while (++i <= (int)ft_strlen(s))
+	i = 0;
+	n = ft_wdcount(s, c);
+	strs = malloc(sizeof(char *) * (n + 1));
+	if (!strs)
+		return (NULL);
+	while (i < n)
 	{
-		if (s[i] != c && start < 0)
-			start = i;
-		else if ((s[i] == c || i == (int)ft_strlen(s)) && start >= 0)
-		{
-			str[j++] = ft_strdupwd(s, start, i);
-			start = -1;
-		}
+		strs[i] = ft_strdupwd(s, c, ft_indexwd(s, c, i));
+		if (!strs[i])
+			return (ft_freesplit(strs));
+		i++;
 	}
-	str[j] = 0;
-	return (str);
+	strs[i] = NULL;
+	return (strs);
 }
 /*
-#include <stdio.h>
-
-void	ft_free(char **tab)
+int main(void)
 {
-	int i = 0;
+	char const s[] = "";
+	char	c = '-';
 
-	while (tab[i] != 0)
-	{
-		free(tab[i]);
-		i++;
-		
-	}
-	free(tab);
-}
+	printf("%d\n", ft_wdcount(s, c));
 
-int	main()
-{
-	char	s[] = " Hello Charlie how are you?";
-	char	c = ' ';
-	int		i = 0;
+	// int	i;
 
-
-	char **tab = ft_split(s, c);
-
-	while (i <= ft_wdcount(s, c))
-	{
-		printf("%s\n", ft_split(s, c)[i]);
-		i++;
-	}
-
-	printf("%s\n", tab[0]);
-	ft_free(tab);
-	//system("leaks a.out");
+	// i = 0;
+	// while ((ft_split(s, ' '))[i] != 0)
+	// {
+	// 	printf("%s\n", (ft_split(s, ' '))[i]);
+	// 	i++;
+	// }
 	return (0);
 }
 */
