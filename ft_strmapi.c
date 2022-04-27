@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 11:29:07 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/04/26 15:44:27 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/27 11:02:06 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s[i])
 	{
-		str[i] = (*f)(i, s[i]);
+		str[i] = (f)(i, s[i]);
 		i++;
 	}
 	str[i] = '\0';

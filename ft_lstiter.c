@@ -6,7 +6,7 @@
 /*   By: ejoo-tho <ejoo-tho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 15:47:41 by elsajoo-tho       #+#    #+#             */
-/*   Updated: 2022/04/26 12:41:06 by ejoo-tho         ###   ########.fr       */
+/*   Updated: 2022/04/27 11:00:35 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		return ;
 	while (lst)
 	{
-		(*f)(lst->content);
+		(f)(lst->content);
 		lst = lst->next;
 	}
 }
