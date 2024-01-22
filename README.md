@@ -1,4 +1,4 @@
-# Libft
+# About this project
 
-This project is about coding a C library.
-It will contain a lot of general purpose functions your programs will rely upon.
+This first project in the curriculum of school 42 is about creating our own library in C by coding standard functions from scratch. By doing this, we learn how standard functions in C work and we will then use this library for subsequent projects. 
+
